@@ -1,24 +1,20 @@
-'use strict';
+'use strict'
 
-const Lookup = require("../index").Lookup;
-const Yeelight = require("../index").Yeelight;
+const Lookup = require('../index').Lookup
 
-let look = new Lookup();
-look.findByPortscanning();
+const look = new Lookup()
+look.findByPortscanning()
 
-look.on("detected",(light) =>
-{
-    console.log("new yeelight detected: host="+light.host);
+look.on('detected', (light) => {
+  console.log('new yeelight detected: host=' + light.host)
 
-    light.on("stateUpdate",(light) =>
-    {
-        console.log(light.getState());
-    });
+  light.on('stateUpdate', (light) => {
+    console.log(light.getState())
+  })
 
-    light.setPower('off');
-});
+  light.setPower('off')
+})
 
-setInterval(() =>
-{
+setInterval(() => {
 
-},1000);
+}, 1000)

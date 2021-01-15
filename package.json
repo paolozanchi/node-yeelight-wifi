@@ -1,9 +1,9 @@
 {
-    "name": "node-yeelight-wifi",
-    "version": "0.1.4",
-    "description": "node js lib for yeelight bulbs",
+    "name": "node-yeelight-wifi-extended",
+    "version": "0.1.5",
+    "description": "Node.js library for yeelight bulbs - extended methods",
     "readmeFilename": "README.md",
-    "author": "Bastian Karge",
+    "author": "Paolo Zanchi",
     "license": "MIT",
     "main": "index.js",
     "dependencies": {
@@ -13,17 +13,27 @@
         "portscanner": "~2.2.0",
         "node-arp": "^1.0.6"
     },
+    "devDependencies": {
+        "eslint": "^7.17.0",
+        "eslint-config-standard": "^16.0.2",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1"
+    },
     "keywords": [
         "light",
         "yeelight",
         "yeelight wifi"
     ],
     "bugs": {
-        "url": "https://github.com/Bastl34/node-yeelight-wifi/issues"
+        "url": "https://github.com/paolozanchi/node-yeelight-wifi/issues"
     },
-    "homepage": "https://github.com/Bastl34/node-yeelight-wifi#readme",
+    "homepage": "https://github.com/paolozanchi/node-yeelight-wifi#readme",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Bastl34/node-yeelight-wifi"
+        "url": "https://github.com/paolozanchi/node-yeelight-wifi"
+    },
+    "scripts": {
+        "test": "eslint"
     }
 }
