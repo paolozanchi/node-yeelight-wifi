@@ -429,8 +429,7 @@ class Yeelight extends EventEmitter {
     this.updateByRGB(number)
 
     // "rgb_value", "effect", "duration"
-    const params =
-    [
+    const params = [
       number,
       (duration) ? 'smooth' : 'sudden',
       (duration || 0)
@@ -444,8 +443,7 @@ class Yeelight extends EventEmitter {
     this.updateBright(bright)
 
     // "brightness", "effect", "duration"
-    const params =
-    [
+    const params = [
       bright,
       (duration) ? 'smooth' : 'sudden',
       (duration || 0)
@@ -464,8 +462,7 @@ class Yeelight extends EventEmitter {
     this.updateHSV(hue, sat, bright)
 
     // "hue", "sat", "effect", "duration"
-    const params =
-    [
+    const params = [
       hue,
       sat,
       (duration) ? 'smooth' : 'sudden',
@@ -488,8 +485,7 @@ class Yeelight extends EventEmitter {
     this.updateCT(ct)
 
     // "ct_value", "effect", "duration"
-    const params =
-    [
+    const params = [
       ct,
       (duration) ? 'smooth' : 'sudden',
       (duration || 0)
@@ -503,14 +499,21 @@ class Yeelight extends EventEmitter {
     this.updatePower(power)
 
     // "power", "effect", "duration"
-    const params =
-    [
+    const params = [
       this.power ? 'on' : 'off',
       (duration) ? 'smooth' : 'sudden',
       (duration || 0)
     ]
 
     return this.sendCommand('set_power', params)
+  }
+
+  setName (name) {
+    const params = [
+      name
+    ]
+
+    return this.sendCommand('set_name', params)
   }
 }
 
